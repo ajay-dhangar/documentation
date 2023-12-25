@@ -8,6 +8,24 @@ console.log(a);
 
 ## Component
 
+```jsx filename="counters.tsx" {3} copy
+import { useState } from 'react'
+
+{/* Import CSS modules */}
+import styles from '../components/counters.module.css'
+
+export const Counter = () => {
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+      <button onClick={() => setCount(count + 1)} className={styles.counter}>
+        Clicked {count} times
+      </button>
+    </div>
+  );
+};
+```
+
 import { useState } from 'react'
 
 {/* Import CSS modules */}
